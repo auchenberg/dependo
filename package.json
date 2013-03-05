@@ -1,0 +1,32 @@
+{
+  "name": "dependo",
+  "version": "0.1.0",
+  "author": "Kenneth Auchecnberg <kenneth@auchenberg.dk>",
+  "repository": "https://github.com/auchenberg/grunt-dependencygraph.git",
+  "homepage": "https://github.com/auchenberg/grunt-dependencygraph.git",
+  "licenses": [
+  {
+    "type": "MIT"
+  }
+  ],
+  "description": "Visualize your CommonJS or AMD module dependencies.",
+  "keywords": [
+    "AMD",
+    "RequireJS",
+    "require",
+    "module",
+    "circular",
+    "dependency",
+    "dependencies",
+    "visualize",
+    "D3"
+  ],
+  "engines": [
+    "node >= 0.8.0"
+  ],
+  "dependencies": {
+    "commander": "1.0.0",
+    "madge": "0.1.4"
+  }
+}
+
