@@ -1,7 +1,7 @@
 dependo
 ===========
 
-Visualize your CommonJS or AMD module dependencies in a force directed graph using D3.js.
+Visualize your CommonJS or AMD module dependencies in a force directed graph report - powered by [D3.js](http://d3js.org/).
 
 Introduction
 -------------
@@ -22,10 +22,10 @@ The best way to show something is by example, so here I generated a dependencygr
 
 ![Example](https://raw.github.com/auchenberg/dependo/gh-pages/example/dependo.jpg)
 
-http://auchenberg.github.com/dependo/example
+See the example here: http://auchenberg.github.com/dependo/example
 
-# Installation
-
+Installation
+------------
 To install as a library:
 
     $ npm install dependo
@@ -34,26 +34,24 @@ To install the command-line tool:
 
     $ sudo npm -g install dependo
 
-# API
-
+API
+---
 ```JavaScript
 
   var Dependo = require('dependo');
 
   // Fire up an dependo instance
   var dependo = new Dependo(src, {
-    format: Commander.format,
-    exclude: Commander.exclude
+    format: 'amd',
+    exclude: '^node_modules'
   });
 
-  var html = dependo.generateHtml();
-
+  dependo.generateHtml();
   ...
 ```
 
-
-# CLI
-
+CLI
+---
     Usage: dependo [options] <file|dir ...>
 
     Options:
@@ -62,13 +60,12 @@ To install the command-line tool:
       -V, --version          output the version number
       -f, --format <name>    format to parse (amd/cjs)
       -x, --exclude <regex>  a regular expression for excluding modules
-
-# Examples
+Examples
+--------
 
 ### Generate HTML report of all module dependencies (AMD), and save it to /example/report.html
 
     $ dependo -f amd /path/src > example/report.html
-
 
 Roadmap
 -------
@@ -77,9 +74,9 @@ dependo is still very much in progress, so here is the todo-list:
 - Proper label positioning: Avoid label collisions and make the graph more readable.
 - Testing! Unit tests of D3 render logic, and the grunt-task itself
 
-Thanks to:
+Thanks to
 -----------
-This project would'nt have been possible without the great work by Patrik Henningson on [node-madge](https://github.com/pahen/node-madge/).
+This project would'nt have been possible without the great work on [node-madge](https://github.com/pahen/node-madge/) by Patrik Henningson, or wonderful [D3.js](http://d3js.org/) library. 
 
 
 Inspiration
