@@ -65,9 +65,9 @@ To install the command-line tool:
 
 # Examples
 
-### Generate HTML report of all module dependencies (AMD), and save it to /output/report.html
+### Generate HTML report of all module dependencies (AMD), and save it to /example/report.html
 
-    $ dependo --format amd /path/src > output/report.html
+    $ dependo -f amd /path/src > example/report.html
 
 
 Roadmap
