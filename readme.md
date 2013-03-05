@@ -20,7 +20,7 @@ Example
 -------
 The best way to show something is by example, so here I generated a dependencygraph of the offical [RequireJS multipage-example](https://github.com/requirejs/example-multipage)
 
-![Example](https://raw.github.com/auchenberg/grunt-dependencygraph/master/example/graph_example.png)
+![Example](https://raw.github.com/auchenberg/dependo/master/example/graph_example.png)
 
 http://auchenberg.github.com/dependo/example
 
@@ -28,11 +28,11 @@ http://auchenberg.github.com/dependo/example
 
 To install as a library:
 
-  $ npm install dependo
+    $ npm install dependo
 
 To install the command-line tool:
 
-  $ sudo npm -g install dependo
+    $ sudo npm -g install dependo
 
 # API
 
@@ -65,9 +65,9 @@ To install the command-line tool:
 
 # Examples
 
-### Generate HTML report of all module dependencies (AMD)
+### Generate HTML report of all module dependencies (AMD), and save it to /output/report.html
 
-$ dependo --format amd /path/src > output/report.html
+    $ dependo --format amd /path/src > output/report.html
 
 
 Roadmap
@@ -79,7 +79,7 @@ dependo is still very much in progress, so here is the todo-list:
 
 Thanks to:
 -----------
-This project would'nt have been possible without the great work by Patrik Henningson on [node-madge](https://github.com/pahen/node-madge/)
+This project would'nt have been possible without the great work by Patrik Henningson on [node-madge](https://github.com/pahen/node-madge/).
 
 
 Inspiration
