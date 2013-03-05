@@ -20,7 +20,7 @@ Example
 -------
 The best way to show something is by example, so here I generated a dependencygraph of the offical [RequireJS multipage-example](https://github.com/requirejs/example-multipage)
 
-![Example](https://raw.github.com/auchenberg/dependo/master/example/graph_example.png)
+![Example](https://raw.github.com/auchenberg/dependo/gh-pages/example/dependo.jpg)
 
 http://auchenberg.github.com/dependo/example
 
