@@ -11,7 +11,6 @@ Commander
   .usage('[options] <file|dir ...>')
   .option('-f, --format <name>', 'format to parse (amd/cjs)', 'amd')
   .option('-x, --exclude <regex>', 'a regular expression for excluding modules')
-  .option('-C, --config <filename>', 'provide a config file')
   .parse(process.argv);
 
 if (!Commander.args.length) {
