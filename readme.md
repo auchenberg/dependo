@@ -41,7 +41,6 @@ To install the command-line tool:
   var Dependo = require('dependo');
 
   // Fire up an dependo instance
-
   var dependo = new Dependo(src, {
     format: Commander.format,
     exclude: Commander.exclude
@@ -50,18 +49,19 @@ To install the command-line tool:
   var html = dependo.generateHtml();
 
   ...
+```
 
 
 # CLI
 
-  Usage: dependo [options] <file|dir ...>
+    Usage: dependo [options] <file|dir ...>
 
-  Options:
+    Options:
 
-    -h, --help             output usage information
-    -V, --version          output the version number
-    -f, --format <name>    format to parse (amd/cjs)
-    -x, --exclude <regex>  a regular expression for excluding modules
+      -h, --help             output usage information
+      -V, --version          output the version number
+      -f, --format <name>    format to parse (amd/cjs)
+      -x, --exclude <regex>  a regular expression for excluding modules
 
 # Examples
 
