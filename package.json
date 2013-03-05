@@ -2,8 +2,8 @@
   "name": "dependo",
   "version": "0.1.0",
   "author": "Kenneth Auchecnberg <kenneth@auchenberg.dk>",
-  "repository": "https://github.com/auchenberg/grunt-dependencygraph.git",
-  "homepage": "https://github.com/auchenberg/grunt-dependencygraph.git",
+  "repository": "https://github.com/auchenberg/dependo.git",
+  "homepage": "https://github.com/auchenberg/dependo.git",
   "licenses": [
   {
     "type": "MIT"
@@ -27,6 +27,10 @@
   "dependencies": {
     "commander": "1.0.0",
     "madge": "0.1.4"
+  },
+  "main": "./lib/dependo",
+  "bin": {
+    "dependo": "./bin/dependo"
   }
 }
 
