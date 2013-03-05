@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var Version = require('../lib/version');
+var Commander = require('commander');
+var Dependo = require('../lib/dependo');
+
+Commander
+  .version(Version)
+  .usage('[options] <file|dir ...>')
+  .option('-f, --format <name>', 'format to parse (amd/cjs)', 'amd')
+  .option('-x, --exclude <regex>', 'a regular expression for excluding modules')
+  .option('-C, --config <filename>', 'provide a config file')
+  .parse(process.argv);
+
+if (!Commander.args.length) {
+  console.log(Commander.helpInformation());
+  process.exit(1);
+}
+
+var src = Commander.args[0];
+
+// Fire up Dependo
+var dependo = new Dependo(src, {
+  format: Commander.format,
+  exclude: Commander.exclude
+});
+
+var html = dependo.generateHtml();
+
+process.stdout.write(html);
+
+
+
