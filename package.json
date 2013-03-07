@@ -26,7 +26,7 @@
   ],
   "dependencies": {
     "commander": "1.0.0",
-    "madge": "0.1.4"
+    "madge": "0.1.4",
     "underscore": "~1.4.4"
   },
   "main": "./lib/dependo",
