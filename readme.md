@@ -60,6 +60,12 @@ CLI
       -V, --version          output the version number
       -f, --format <name>    format to parse (amd/cjs)
       -x, --exclude <regex>  a regular expression for excluding modules
+     
+Grunt
+-----
+I also written a grunt-task, that can be found in this seperate repository https://github.com/auchenberg/grunt-dependo
+
+
 Examples
 --------
 
