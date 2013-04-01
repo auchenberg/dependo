@@ -6,7 +6,10 @@ Visualize your CommonJS or AMD module dependencies in a force directed graph rep
 Introduction
 -------------
 
-You can read the full introduction to the project in my [blog post](http://blog.kenneth.io/blog/2013/01/23/visualize-your-javaScript-dependencies-with-grunt-dependencygraph/).
+Let me introduce dependo - A small visualization tool that draws an force directed graph of JavaScript dependencies that has been annotated with either CommonJS, or AMD. Behind the scene I’m using a wonderful library named [node-madge](https://github.com/pahen/node-madge/), to extract the dependencies and combined with the power of [D3.js](http://d3js.org/) I draw a beautiful zoomable directed graph.
+
+
+You can read the full introduction to the project in my [blog post](http://blog.kenneth.io/blog/2013/04/01/visualize-your-javaScript-dependencies-with-dependo/).
 
 Features
 -------------
@@ -16,9 +19,10 @@ Features
 - Hovering a node will highlight it's direct dependencies.
 - It's possible to drag a node to a specific position, to re-layout the graph.
 
-Example
+Report example
 -------
-The best way to show something is by example, so here I generated a dependencygraph of the offical [RequireJS multipage-example](https://github.com/requirejs/example-multipage)
+
+The best way to show something is by example, so here I generated a graph of the official RequireJS [multipage](https://github.com/requirejs/example-multipage) example:
 
 ![Example](https://raw.github.com/auchenberg/dependo/gh-pages/example/dependo.jpg)
 
@@ -60,18 +64,14 @@ CLI
       -V, --version          output the version number
       -f, --format <name>    format to parse (amd/cjs)
       -x, --exclude <regex>  a regular expression for excluding modules
-     
-Grunt
------
-I also written a grunt-task, that can be found in this seperate repository https://github.com/auchenberg/grunt-dependo
-
-
-Examples
---------
 
 ### Generate HTML report of all module dependencies (AMD), and save it to /example/report.html
 
     $ dependo -f amd /path/src > example/report.html
+    
+Grunt
+-----
+I also written a grunt-task, that can be found in this seperate repository https://github.com/auchenberg/grunt-dependo
 
 Roadmap
 -------
