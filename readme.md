@@ -71,7 +71,7 @@ CLI
     
 Grunt
 -----
-I also written a grunt-task, that can be found in this seperate repository https://github.com/auchenberg/grunt-dependo
+I also wrote a grunt-task that can be found in this seperate repository: https://github.com/auchenberg/grunt-dependo
 
 Roadmap
 -------
