@@ -47,7 +47,14 @@ API
   // Fire up an dependo instance
   var dependo = new Dependo(src, {
     format: 'amd',
-    exclude: '^node_modules'
+    exclude: '^node_modules',
+    tranform: function(dep){
+        //Apply a transformation on dependencies 
+        ....
+        
+        return dep;
+        
+    }
   });
 
   dependo.generateHtml();
