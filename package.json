@@ -1,16 +1,16 @@
 {
-  "name": "dependo",
-  "version": "0.1.1",
-  "author": "Kenneth Auchecnberg <kenneth@auchenberg.dk>",
-  "repository": "https://github.com/auchenberg/dependo.git",
-  "homepage": "https://github.com/auchenberg/dependo.git",
-  "licenses": [
-  {
-    "type": "MIT"
+    "name": "dependo",
+    "version": "0.1.2",
+    "author": "Kenneth Auchecnberg <kenneth@auchenberg.dk>",
+    "repository": "https://github.com/auchenberg/dependo.git",
+    "homepage": "https://github.com/auchenberg/dependo.git",
+    "licenses": [
+        {
+            "type": "MIT"
   }
   ],
-  "description": "Visualize your CommonJS or AMD module dependencies.",
-  "keywords": [
+    "description": "Visualize your CommonJS or AMD module dependencies.",
+    "keywords": [
     "AMD",
     "RequireJS",
     "require",
@@ -21,17 +21,16 @@
     "visualize",
     "D3"
   ],
-  "engines": [
+    "engines": [
     "node >= 0.8.0"
   ],
-  "dependencies": {
-    "commander": "1.0.0",
-    "madge": "0.1.4",
-    "underscore": "~1.4.4"
-  },
-  "main": "./lib/dependo",
-  "bin": {
-    "dependo": "./bin/dependo"
-  }
+    "dependencies": {
+        "commander": "1.0.0",
+        "madge": "0.3.1",
+        "underscore": "~1.4.4"
+    },
+    "main": "./lib/dependo",
+    "bin": {
+        "dependo": "./bin/dependo"
+    }
 }
-
