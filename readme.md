@@ -48,7 +48,7 @@ API
   var dependo = new Dependo(src, {
     format: 'amd',
     exclude: '^node_modules',
-    tranform: function(dep){
+    transform: function(dep){
         //Apply a transformation on dependencies 
         ....
         
