@@ -47,6 +47,7 @@ API
   // Fire up an dependo instance
   var dependo = new Dependo(src, {
     format: 'amd',
+    requireConfig: 'optional path to RequireJS config file',
     exclude: '^node_modules',
     transform: function(dep){
         //Apply a transformation on dependencies 
