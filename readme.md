@@ -38,6 +38,19 @@ To install the command-line tool:
 
     $ sudo npm -g install dependo
 
+Options
+---
+
+```JavaScript
+{
+    'format': The module format to expect, 'cjs' or 'amd'. AMD (amd) is the default format.
+    'optimized': Boolean, True if the parser should read modules from a optimized file (r.js). Defaults to false.
+    'exclude': String from which a regex will be constructed for excluding files from the scan.
+    'mainRequireModule': Name of the module if parsing an optimized file (r.js), where the main file used require() instead of define. Defaults to ''.
+    'requireConfig': Path to RequireJS config used to find shim dependencies and path aliases. Not used by default.
+}
+```
+
 API
 ---
 ```JavaScript
