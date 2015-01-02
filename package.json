@@ -26,8 +26,8 @@
   ],
     "dependencies": {
         "commander": "1.0.0",
-        "madge": "0.3.1",
         "underscore": "~1.4.4"
+        "madge": "~0.3.5"
     },
     "main": "./lib/dependo",
     "bin": {
