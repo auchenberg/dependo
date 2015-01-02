@@ -4,23 +4,21 @@
     "author": "Kenneth Auchecnberg <kenneth@auchenberg.dk>",
     "repository": "https://github.com/auchenberg/dependo.git",
     "homepage": "https://github.com/auchenberg/dependo.git",
-    "licenses": [
-        {
-            "type": "MIT"
-  }
-  ],
+    "licenses": [{
+        "type": "MIT"
+    }],
     "description": "Visualize your CommonJS or AMD module dependencies.",
     "keywords": [
-    "AMD",
-    "RequireJS",
-    "require",
-    "module",
-    "circular",
-    "dependency",
-    "dependencies",
-    "visualize",
-    "D3"
-  ],
+        "AMD",
+        "RequireJS",
+        "require",
+        "module",
+        "circular",
+        "dependency",
+        "dependencies",
+        "visualize",
+        "D3"
+    ],
     "engines": [
         "node >= 0.10.0"
     ],
