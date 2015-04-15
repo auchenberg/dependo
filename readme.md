@@ -44,7 +44,7 @@ Options
 
 ```JavaScript
 {
-    'format': The module format to expect, 'cjs', 'amd', or 'es6'. AMD (amd) is the default format.
+    'format': The module format to expect, 'cjs', 'amd', 'es6', or 'json'. AMD (amd) is the default format. If 'json', use the -d/--deps option to provide a JSON file
     'optimized': Boolean, True if the parser should read modules from a optimized file (r.js). Defaults to false.
     'exclude': String from which a regex will be constructed for excluding files from the scan.
     'mainRequireModule': Name of the module if parsing an optimized file (r.js), where the main file used require() instead of define. Defaults to ''.
@@ -84,7 +84,8 @@ CLI
 
       -h, --help             output usage information
       -V, --version          output the version number
-      -f, --format <name>    format to parse (amd/cjs)
+      -f, --format <name>    format to parse (amd/cjs/es6/json)
+      -d, --deps <file>      the file from which to read a JSON set of dependencies (only for -f json)
       -x, --exclude <regex>  a regular expression for excluding modules
 
 ### Generate HTML report of all module dependencies (AMD), and save it to /example/report.html
@@ -93,7 +94,7 @@ CLI
 
 Grunt
 -----
-I also wrote a grunt-task that can be found in this seperate repository: https://github.com/auchenberg/grunt-dependo
+I also wrote a grunt-task that can be found in this separate repository: https://github.com/auchenberg/grunt-dependo
 
 Roadmap
 -------
@@ -104,7 +105,7 @@ dependo is still very much in progress, so here is the todo-list:
 
 Thanks to
 -----------
-This project would'nt have been possible without the great work on [node-madge](https://github.com/pahen/node-madge/) by Patrik Henningson, or wonderful [D3.js](http://d3js.org/) library.
+This project wouldn't have been possible without the great work on [node-madge](https://github.com/pahen/node-madge/) by Patrik Henningson, or wonderful [D3.js](http://d3js.org/) library.
 
 
 Inspiration
