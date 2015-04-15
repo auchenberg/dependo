@@ -1,12 +1,13 @@
 dependo
 ===========
 
-Visualize your CommonJS or AMD module dependencies in a force directed graph report - powered by [D3.js](http://d3js.org/).
+Visualize your CommonJS, AMD, or ES6 module dependencies in a force directed graph report - powered by [D3.js](http://d3js.org/).
 
 Introduction
 -------------
 
-Let me introduce dependo - A small visualization tool that draws an force directed graph of JavaScript dependencies that has been annotated with either CommonJS, or AMD. Behind the scene I’m using a wonderful library named [node-madge](https://github.com/pahen/node-madge/), to extract the dependencies and combined with the power of [D3.js](http://d3js.org/) I draw a beautiful zoomable directed graph.
+Let me introduce dependo - A small visualization tool that draws an force directed graph of JavaScript dependencies pulled from a codebase of
+CommonJS, AMD, or ES6. Behind the scene I’m using a wonderful library named [node-madge](https://github.com/pahen/node-madge/), to extract the dependencies and combined with the power of [D3.js](http://d3js.org/) I draw a beautiful zoomable directed graph.
 
 
 You can read the full introduction to the project in my [blog post](http://blog.kenneth.io/blog/2013/04/01/visualize-your-javaScript-dependencies-with-dependo/).
@@ -43,7 +44,7 @@ Options
 
 ```JavaScript
 {
-    'format': The module format to expect, 'cjs' or 'amd'. AMD (amd) is the default format.
+    'format': The module format to expect, 'cjs', 'amd', or 'es6'. AMD (amd) is the default format.
     'optimized': Boolean, True if the parser should read modules from a optimized file (r.js). Defaults to false.
     'exclude': String from which a regex will be constructed for excluding files from the scan.
     'mainRequireModule': Name of the module if parsing an optimized file (r.js), where the main file used require() instead of define. Defaults to ''.
@@ -63,11 +64,11 @@ API
     requireConfig: 'optional path to RequireJS config file',
     exclude: '^node_modules',
     transform: function(dep){
-        //Apply a transformation on dependencies 
+        //Apply a transformation on dependencies
         ....
-        
+
         return dep;
-        
+
     }
   });
 
@@ -89,7 +90,7 @@ CLI
 ### Generate HTML report of all module dependencies (AMD), and save it to /example/report.html
 
     $ dependo -f amd /path/src > example/report.html
-    
+
 Grunt
 -----
 I also wrote a grunt-task that can be found in this seperate repository: https://github.com/auchenberg/grunt-dependo
@@ -103,12 +104,9 @@ dependo is still very much in progress, so here is the todo-list:
 
 Thanks to
 -----------
-This project would'nt have been possible without the great work on [node-madge](https://github.com/pahen/node-madge/) by Patrik Henningson, or wonderful [D3.js](http://d3js.org/) library. 
+This project would'nt have been possible without the great work on [node-madge](https://github.com/pahen/node-madge/) by Patrik Henningson, or wonderful [D3.js](http://d3js.org/) library.
 
 
 Inspiration
 -----------
 http://bl.ocks.org/1153292
-
-
-
