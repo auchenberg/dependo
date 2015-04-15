@@ -9,7 +9,7 @@ var Dependo = require('../lib/dependo');
 Commander
     .version(Version)
     .usage('[options] <file|dir ...>')
-    .option('-f, --format <name>', 'format to parse (amd/cjs)', 'amd')
+    .option('-f, --format <name>', 'format to parse (amd/cjs/es6)', 'amd')
     .option('-x, --exclude <regex>', 'a regular expression for excluding modules')
     .parse(process.argv);
 
