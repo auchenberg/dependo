@@ -1,0 +1,7 @@
+{
+  "a": ["sub/b"],
+  "d": [],
+  "fancy-main/not-index": [],
+  "sub/b": ["sub/c"],
+  "sub/c": ["d"]
+}

@@ -5,24 +5,30 @@
 var Version = require('../lib/version');
 var Commander = require('commander');
 var Dependo = require('../lib/dependo');
+var fs = require('fs');
 
 Commander
     .version(Version)
     .usage('[options] <file|dir ...>')
-    .option('-f, --format <name>', 'format to parse (amd/cjs/es6)', 'amd')
+    .option('-f, --format <name>', 'format to parse (amd/cjs/es6/json)', 'amd')
     .option('-x, --exclude <regex>', 'a regular expression for excluding modules')
     .parse(process.argv);
 
 if (!Commander.args.length) {
-    console.log(Commander.helpInformation());
-    process.exit(1);
+  console.log(Commander.helpInformation());
+  process.exit(1);
 }
 
 var src = Commander.args[0];
 
+var directDeps = Commander.format==='json' &&
+  fs.existsSync(src) &&
+  JSON.parse(fs.readFileSync(src));
+
 var dependo = new Dependo(src, {
     format: Commander.format,
-    exclude: Commander.exclude
+    exclude: Commander.exclude,
+    directDeps: directDeps
 });
 
 var html = dependo.generateHtml();
