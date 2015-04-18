@@ -44,7 +44,7 @@ Options
 
 ```JavaScript
 {
-    'format': The module format to expect, 'cjs', 'amd', 'es6', or 'json'. AMD (amd) is the default format. If 'json', use the -d/--deps option to provide a JSON file
+    'format': The module format to expect, 'cjs', 'amd', 'es6', or 'json'. AMD (amd) is the default format. If 'json', pass a file formatted like `example.json` in the `example/` directory.
     'optimized': Boolean, True if the parser should read modules from a optimized file (r.js). Defaults to false.
     'exclude': String from which a regex will be constructed for excluding files from the scan.
     'mainRequireModule': Name of the module if parsing an optimized file (r.js), where the main file used require() instead of define. Defaults to ''.
@@ -85,7 +85,6 @@ CLI
       -h, --help             output usage information
       -V, --version          output the version number
       -f, --format <name>    format to parse (amd/cjs/es6/json)
-      -d, --deps <file>      the file from which to read a JSON set of dependencies (only for -f json)
       -x, --exclude <regex>  a regular expression for excluding modules
 
 ### Generate HTML report of all module dependencies (AMD), and save it to /example/report.html

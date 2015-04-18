@@ -12,11 +12,9 @@ Commander
     .usage('[options] <file|dir ...>')
     .option('-f, --format <name>', 'format to parse (amd/cjs/es6/json)', 'amd')
     .option('-x, --exclude <regex>', 'a regular expression for excluding modules')
-    .option('-d, --deps <filename>', 'when used with \'-f json\', a file to load deps from in {p1:[\'c1\',\'c2\']} format')
     .parse(process.argv);
 
-
-if (Commander.format !== "json" && !Commander.args.length) {
+if (!Commander.args.length) {
   console.log(Commander.helpInformation());
   process.exit(1);
 }
@@ -24,8 +22,8 @@ if (Commander.format !== "json" && !Commander.args.length) {
 var src = Commander.args[0];
 
 var directDeps = Commander.format==='json' &&
-  fs.existsSync(Commander.deps) &&
-  JSON.parse(fs.readFileSync(Commander.deps));
+  fs.existsSync(src) &&
+  JSON.parse(fs.readFileSync(src));
 
 var dependo = new Dependo(src, {
     format: Commander.format,
