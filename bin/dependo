@@ -5,6 +5,7 @@
 var Version = require('../lib/version');
 var Commander = require('commander');
 var Dependo = require('../lib/dependo');
+var converse = require('../lib/converse');
 var fs = require('fs');
 
 Commander
@@ -12,6 +13,7 @@ Commander
     .usage('[options] <file|dir ...>')
     .option('-f, --format <name>', 'format to parse (amd/cjs/es6/json)', 'amd')
     .option('-x, --exclude <regex>', 'a regular expression for excluding modules')
+    .option('-v, --reverse', 'reverse direction of arrows', false)
     .parse(process.argv);
 
 if (!Commander.args.length) {
@@ -28,7 +30,8 @@ var directDeps = Commander.format==='json' &&
 var dependo = new Dependo(src, {
     format: Commander.format,
     exclude: Commander.exclude,
-    directDeps: directDeps
+    directDeps: directDeps,
+    transform: Commander.reverse ? converse : undefined
 });
 
 var html = dependo.generateHtml();
