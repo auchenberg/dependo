@@ -13,6 +13,7 @@ Commander
     .usage('[options] <file|dir ...>')
     .option('-f, --format <name>', 'format to parse (amd/cjs/es6/json)', 'amd')
     .option('-x, --exclude <regex>', 'a regular expression for excluding modules')
+    .option('-t, --title <title>', 'the title of the generated document (dependo)')
     .option('-v, --reverse', 'reverse direction of arrows', false)
     .parse(process.argv);
 
@@ -31,6 +32,7 @@ var dependo = new Dependo(src, {
     format: Commander.format,
     exclude: Commander.exclude,
     directDeps: directDeps,
+    title: Commander.title,
     transform: Commander.reverse ? converse : undefined
 });
 
