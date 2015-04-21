@@ -49,6 +49,8 @@ Options
     'exclude': String from which a regex will be constructed for excluding files from the scan.
     'mainRequireModule': Name of the module if parsing an optimized file (r.js), where the main file used require() instead of define. Defaults to ''.
     'requireConfig': Path to RequireJS config used to find shim dependencies and path aliases. Not used by default.
+    'reverse': Reverse dependency arrow directions.
+    'title': The title of the generated HTML document.
 }
 ```
 
@@ -86,6 +88,8 @@ CLI
       -V, --version          output the version number
       -f, --format <name>    format to parse (amd/cjs/es6/json)
       -x, --exclude <regex>  a regular expression for excluding modules
+      -t, --title <title>    the title of the generated document (dependo)
+      -v, --reverse          reverse direction of arrows
 
 ### Generate HTML report of all module dependencies (AMD), and save it to /example/report.html
 
