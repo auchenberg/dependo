@@ -15,6 +15,7 @@ Commander
     .option('-f, --format <name>', 'format to parse (amd/cjs/es6/json)', 'amd')
     .option('-x, --exclude <regex>', 'a regular expression for excluding modules')
     .option('-t, --title <title>', 'the title of the generated document (dependo)')
+    .option('-l, --layout <filename>', 'load a previously saved layout (json)')
     .option('-v, --reverse', 'reverse direction of arrows', false)
     .parse(process.argv);
 
@@ -25,9 +26,16 @@ if (!Commander.args.length) {
 
 var src = Commander.args[0];
 
-var directDeps = Commander.format==='json' &&
+var directDeps = Commander.format === 'json' &&
   fs.existsSync(src) &&
   JSON.parse(fs.readFileSync(src));
+
+if (Commander.layout && typeof (Commander.layout) == 'string' && fs.existsSync(Commander.layout)) {
+    var data = JSON.parse(fs.readFileSync(Commander.layout));
+    if (data) {
+        Commander.layoutData = data;
+    }
+}
 
 var dependo = new Dependo(src, {
     basePath: path.resolve(src).replace(/\\/g, '/') + '/',
@@ -35,6 +43,8 @@ var dependo = new Dependo(src, {
     exclude: Commander.exclude,
     directDeps: directDeps,
     title: Commander.title,
+    layout: Commander.layout,
+    layoutData: Commander.layoutData,
     transform: Commander.reverse ? converse : undefined
 });
 
