@@ -7,6 +7,7 @@ var Commander = require('commander');
 var Dependo = require('../lib/dependo');
 var converse = require('../lib/converse');
 var fs = require('fs');
+var path = require('path');
 
 Commander
     .version(Version)
@@ -29,6 +30,7 @@ var directDeps = Commander.format==='json' &&
   JSON.parse(fs.readFileSync(src));
 
 var dependo = new Dependo(src, {
+    basePath: path.resolve(src).replace(/\\/g, '/') + '/',
     format: Commander.format,
     exclude: Commander.exclude,
     directDeps: directDeps,
