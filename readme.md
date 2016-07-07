@@ -86,12 +86,13 @@ CLI
 
     Options:
 
-      -h, --help             output usage information
-      -V, --version          output the version number
-      -f, --format <name>    format to parse (amd/cjs/es6/json)
-      -x, --exclude <regex>  a regular expression for excluding modules
-      -t, --title <title>    the title of the generated document (dependo)
-      -v, --reverse          reverse direction of arrows
+      -h, --help              output usage information
+      -V, --version           output the version number
+      -f, --format <name>     format to parse (amd/cjs/es6/json)
+      -x, --exclude <regex>   a regular expression for excluding modules
+      -t, --title <title>     the title of the generated document (dependo)
+      -l, --layout <filename> load a previously saved layout (json)
+      -v, --reverse           reverse direction of arrows
 
 ### Generate HTML report of all module dependencies (AMD), and save it to /example/report.html
 
