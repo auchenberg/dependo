@@ -16,6 +16,7 @@ Commander
     .option('-x, --exclude <regex>', 'a regular expression for excluding modules')
     .option('-t, --title <title>', 'the title of the generated document (dependo)')
     .option('-v, --reverse', 'reverse direction of arrows', false)
+    .option('-e, --extensions <extensions>', 'Valid file extensions used to find files in directories e.g. .js,.ts Default: .js', '.js')
     .parse(process.argv);
 
 if (!Commander.args.length) {
@@ -35,7 +36,8 @@ var dependo = new Dependo(src, {
     exclude: Commander.exclude,
     directDeps: directDeps,
     title: Commander.title,
-    transform: Commander.reverse ? converse : undefined
+    transform: Commander.reverse ? converse : undefined,
+    extensions: Commander.extensions.split(',')
 });
 
 var html = dependo.generateHtml();
