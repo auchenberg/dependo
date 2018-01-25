@@ -53,6 +53,7 @@ Options
     'requireConfig': Path to RequireJS config used to find shim dependencies and path aliases. Not used by default.
     'reverse': Reverse dependency arrow directions.
     'title': The title of the generated HTML document.
+    'extensions': Valid file extensions used to find files in directories e.g. .js,.ts Default: .js
 }
 ```
 
@@ -92,6 +93,7 @@ CLI
       -x, --exclude <regex>  a regular expression for excluding modules
       -t, --title <title>    the title of the generated document (dependo)
       -v, --reverse          reverse direction of arrows
+      -e, --extensions       file extensions to use separated by comma
 
 ### Generate HTML report of all module dependencies (AMD), and save it to /example/report.html
 
